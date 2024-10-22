@@ -1,0 +1,18 @@
+openapi: 3.1.0
+info:
+  title: NetherSword File Server
+  description: NetherSword File Server Это место куда любой человек может загрузить свой файл
+  version: 1.0.0
+servers:
+  - url: 'https://files.nethersword.ru'
+paths:
+  /file:
+    get:
+      description: Get a file
+      responses:
+        200:
+          description: Отдает файл
+          content:
+            application/zip:
+              examples:
+                user.zip
